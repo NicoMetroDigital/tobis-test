@@ -13,6 +13,7 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -28,7 +29,6 @@ dependencies {
 tasks.withType<org.springframework.boot.gradle.tasks.run.BootRun> {
     mainClass.set("com.example.todo.ToDoApplication")   // Pfad zur Main-Klasse
 }
-
 tasks.bootRun {
     mainClass.set("com.example.todo.ToDoApplication")
 }
