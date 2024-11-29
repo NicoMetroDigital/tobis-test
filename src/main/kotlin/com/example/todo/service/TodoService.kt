@@ -1,7 +1,6 @@
-package com.example.service
+package com.example.todo.service
 
-
-import com.example.repository.TodoRepository
+import com.example.todo.repository.TodoRepository
 import com.example.todo.model.Todo
 import org.springframework.stereotype.Service
 
@@ -20,7 +19,13 @@ class TodoService(private val todoRepository: TodoRepository) {
         } else null
     }
 
-    fun deleteTodo(id: Long) {
-        todoRepository.deleteById(id)
+    fun deleteTodoById(id: Long): Boolean {
+        return if (todoRepository.existsById(id)) {
+            todoRepository.deleteById(id)
+            true // Rückgabe true bedeutet, dass das Löschen erfolgreich war
+        } else {
+            false // Rückgabe false bedeutet, dass die ID nicht existiert
+        }
     }
+
 }

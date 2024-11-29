@@ -1,0 +1,11 @@
+# Ignoriere Build-Output
+build/
+.gradle/
+
+# Ignoriere Versionskontrolle
+.git
+.gitignore
+
+# Ignoriere temporäre Dateien
+*.log
+*.tmp

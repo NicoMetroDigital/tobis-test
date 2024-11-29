@@ -27,11 +27,9 @@ dependencies {
 }
 
 tasks.withType<org.springframework.boot.gradle.tasks.run.BootRun> {
-    mainClass.set("com.example.todo.ToDoApplication")   // Pfad zur Main-Klasse
+    mainClass.set("com.example.todo.ToDoApplication.")   // Pfad zur Main-Klasse
 }
-tasks.bootRun {
-    mainClass.set("com.example.todo.ToDoApplication")
-}
+
 
 tasks.getByName<Jar>("jar") {
     enabled = true                                      // Aktiviert das JAR-Erstellen, wenn es benötigt wird

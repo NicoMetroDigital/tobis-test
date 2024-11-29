@@ -6,14 +6,14 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 
 @Entity
-  data class Todo(
+data class Todo(
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    var id: Long? = null,
+    var id: Long = 0L, // ID als nicht-nullable setzen
+    val title: String,
     val description: String,
     val isComplete: Boolean = false
 ) {
-    constructor() : this(null, "", false) {
-
-    }
+    constructor() : this(0L, "", false.toString()) // Default-Werte setzen
 }
+
 
