@@ -16,7 +16,7 @@ class WebConfig : WebMvcConfigurer {
     override fun addCorsMappings(registry: CorsRegistry) {
         // CORS für alle Endpunkte konfigurieren
         registry.addMapping("/**")  // Alle Endpunkte
-            .allowedOrigins("http://localhost:3000") // Erlaubt nur Anfragen von localhost:3000
+            .allowedOrigins("http://localhost:3001") // Erlaubt nur Anfragen von localhost:3000
             .allowedMethods("GET", "POST", "PUT", "DELETE") // Erlaubt nur diese HTTP-Methoden
             .allowedHeaders("*") // Erlaubt alle Header
             .allowCredentials(true) // Erlaubt Cookies und Credentials
